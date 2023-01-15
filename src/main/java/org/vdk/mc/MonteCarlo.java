@@ -1,15 +1,14 @@
 package org.vdk.mc;
 
-import org.vdk.Point2D;
-import org.vdk.Point3D;
-import org.vdk.Polygon;
+import org.vdk.util.Point2D;
+import org.vdk.util.Point3D;
+import org.vdk.util.Polygon;
 import org.vdk.util.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;

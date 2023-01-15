@@ -1,9 +1,8 @@
 package org.vdk.mc;
 
-import lombok.AllArgsConstructor;
-import org.vdk.Point2D;
-import org.vdk.Point3D;
-import org.vdk.Polygon;
+import org.vdk.util.Point2D;
+import org.vdk.util.Point3D;
+import org.vdk.util.Polygon;
 
 import java.util.function.Function;
 

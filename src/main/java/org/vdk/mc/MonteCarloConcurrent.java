@@ -1,8 +1,10 @@
 package org.vdk.mc;
 
-import org.vdk.*;
 import org.vdk.mc.util.MonteCarloCallableN;
 import org.vdk.mc.util.MonteCarloCallableP;
+import org.vdk.util.Point2D;
+import org.vdk.util.Point3D;
+import org.vdk.util.Polygon;
 
 import java.util.ArrayList;
 import java.util.Iterator;

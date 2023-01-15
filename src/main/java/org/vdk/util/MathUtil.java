@@ -1,4 +1,4 @@
-package org.vdk;
+package org.vdk.util;
 
 public class MathUtil {
 

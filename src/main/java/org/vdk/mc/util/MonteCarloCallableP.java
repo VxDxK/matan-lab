@@ -1,10 +1,9 @@
 package org.vdk.mc.util;
 
 import lombok.AllArgsConstructor;
-import org.vdk.Point2D;
-import org.vdk.Point3D;
-import org.vdk.Polygon;
-import org.vdk.Range;
+import org.vdk.util.Point2D;
+import org.vdk.util.Point3D;
+import org.vdk.util.Polygon;
 
 import java.util.Random;
 import java.util.concurrent.Callable;

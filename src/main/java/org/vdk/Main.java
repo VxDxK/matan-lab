@@ -1,23 +1,17 @@
 package org.vdk;
 
-import org.vdk.mc.Integral;
 import org.vdk.mc.MonteCarlo;
-import org.vdk.mc.MonteCarloConcurrent;
 import org.vdk.mc.NumericIntegration;
-import org.vdk.util.Pair;
+import org.vdk.util.*;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.function.BiFunction;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import static java.lang.Math.*;
 import static java.lang.Math.max;
@@ -49,11 +43,11 @@ public class Main {
             NumericIntegration numericIntegration = new NumericIntegration(polygon, dFunction, startGrid);
             double lastValue = numericIntegration.integrate();
             try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("result.csv"))) {
-                for (int i = 0; i <= collect.get(1); i++) {
+                for (int i = 1; i <= collect.get(1); i++) {
                     double newGrid = startGrid / (2 << i);
                     NumericIntegration numericIntegration2 = new NumericIntegration(polygon, dFunction, newGrid);
                     double integrateD = numericIntegration2.integrate();
-                    bufferedWriter.write(String.format("%d;%f\n", i, abs(integrateD - lastValue) / 3));
+                    bufferedWriter.write(String.format("%d;%f\n", i, abs(integrateD - lastValue)));
                     lastValue = integrateD;
                 }
             }

@@ -1,4 +1,7 @@
-package org.vdk;
+package org.vdk.util;
+
+import org.vdk.util.Point2D;
+import org.vdk.util.Polygon;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
